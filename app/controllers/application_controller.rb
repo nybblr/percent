@@ -30,4 +30,8 @@ class ApplicationController < ActionController::Base
     session[:user_id] = user.id
     @current_user = user
   end
+
+  def stable_client
+    env['stable.strategy'].client
+  end
 end

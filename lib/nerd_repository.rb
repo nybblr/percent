@@ -14,13 +14,13 @@ class NerdRepository
   end
   
   def me
-    @me ||= @access_token.get('users/me.json').parsed do |me|
+    @me ||= @access_token.get('/users/me.json').parsed do |me|
       Nerd.new(me["full_name"], me["hire_date"].blank? ? "" : Date.parse(me["hire_date"]))
     end
   end
 
   private
   def all_nerds
-    @access_token.get('users.json').parsed
+    @access_token.get('/users.json').parsed
   end
 end

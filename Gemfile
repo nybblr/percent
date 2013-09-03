@@ -17,7 +17,7 @@ gem 'uglifier', '>= 1.3.0'
 # Authentication & Authorization
 gem 'omniauth'
 gem 'omniauth-oauth2'
-gem 'omniauth-stable', github: 'bignerdranch/omniauth-stable'
+gem 'omniauth-stable', github: 'bignerdranch/omniauth-stable', branch: 'nybblr/3-add_stable_strategy_to_env'
 
 # View
 gem 'slim'
@@ -37,7 +37,7 @@ gem 'rack-canonical-host', group: [:production]
 gem 'progress_bar'
 
 group :development, :test do
-  gem 'dotenv'
+  gem 'dotenv-rails'
 
   gem 'foreman'
   gem 'pry'
